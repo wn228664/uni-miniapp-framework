@@ -1,0 +1,50 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "框架首页"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "packages/showcase",
+      "pages": [
+        {
+          "path": "components",
+          "style": {
+            "navigationBarTitleText": "通用组件"
+          }
+        },
+        {
+          "path": "data",
+          "style": {
+            "navigationBarTitleText": "列表与任务",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "navigation",
+          "style": {
+            "navigationBarTitleText": "导航与适配",
+            "navigationStyle": "custom"
+          }
+        }
+      ]
+    }
+  ],
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue"
+    }
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Miniapp Framework",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f5f7fa"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "uni-miniapp-framework",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Vue 3 / JavaScript / Pinia / uview-plus 通用微信小程序框架",
+  "engines": {
+    "node": ">=22.12 <23"
+  },
+  "packageManager": "npm@10.9.4",
+  "scripts": {
+    "dev": "uni -p mp-weixin",
+    "dev:mp-weixin": "uni -p mp-weixin",
+    "build": "uni build -p mp-weixin",
+    "build:mp-weixin": "uni build -p mp-weixin",
+    "dev:h5": "uni",
+    "build:h5": "uni build",
+    "lint": "eslint src tests tool --max-warnings=0",
+    "test": "node --test tests/*.test.js",
+    "check": "node tool/check-project.js",
+    "verify": "npm run check && npm run lint && npm test && npm run build && npm run build:h5"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app": "3.0.0-5030420261029002",
+    "@dcloudio/uni-components": "3.0.0-5030420261029002",
+    "@dcloudio/uni-h5": "3.0.0-5030420261029002",
+    "@dcloudio/uni-mp-weixin": "3.0.0-5030420261029002",
+    "vue": "3.4.21",
+    "vue-i18n": "9.14.5",
+    "pinia": "2.1.7",
+    "uview-plus": "3.8.138",
+    "dayjs": "1.11.13",
+    "clipboard": "2.0.11"
+  },
+  "devDependencies": {
+    "@dcloudio/vite-plugin-uni": "3.0.0-5030420261029002",
+    "@dcloudio/uni-cli-shared": "3.0.0-5030420261029002",
+    "@vue/runtime-core": "3.4.21",
+    "vite": "5.2.8",
+    "sass": "1.77.8",
+    "eslint": "9.39.1",
+    "@eslint/js": "9.39.1",
+    "eslint-plugin-vue": "9.33.0",
+    "globals": "15.15.0",
+    "prettier": "3.6.2"
+  },
+  "overrides": {
+    "source-map-js": "1.2.2",
+    "ws": "8.21.0"
+  }
+}

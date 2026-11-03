@@ -1,0 +1,29 @@
+{
+  "name": "Miniapp Framework",
+  "appid": "",
+  "description": "通用小程序框架",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "vueVersion": "3",
+  "mp-weixin": {
+    "appid": "",
+    "usingComponents": true,
+    "setting": {
+      "urlCheck": true
+    },
+    "optimization": {
+      "subPackages": true
+    },
+    "mergeVirtualHostAttributes": true
+  },
+  "h5": {
+    "title": "Miniapp Framework",
+    "router": {
+      "mode": "hash"
+    }
+  },
+  "uniStatistics": {
+    "enable": false
+  }
+}
