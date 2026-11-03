@@ -142,4 +142,3 @@ CI 只检查与构建，不包含上传、发布或业务凭证。H5 预览、�
 仓库：[wn228664/uni-miniapp-framework](https://github.com/wn228664/uni-miniapp-framework)，默认分支main。push/PR会触发Framework checks，使用Node 22.21.1运行npm ci和npm run verify。CI实时结果以页面检查记录为准，不包含微信真机、上传发布或真实后端验收。
 
 建议从新分支开始扩展；提交前执行verify，更新对应使用说明和测试。不要提交node_modules、dist、.env.local、微信私有工具配置、证书或真实凭证。依赖版本与锁文件一起维护。
-
