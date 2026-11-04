@@ -1,3 +1,4 @@
+/** 检查手写 JS 和 Vue；uni/getCurrentPages 为平台只读全局，布局排版交给 Prettier，保留语义与未使用符号检查。 */
 import js from '@eslint/js'
 import vue from 'eslint-plugin-vue'
 import globals from 'globals'

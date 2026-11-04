@@ -1,10 +1,24 @@
 <script setup>
 import { ref, watch } from 'vue'
 /** src 可为网络或临时图片路径；无图/加载失败显示占位，label 提供可访问名称，src 改变后重新尝试加载。 */
-const props = defineProps({ src: { type: String, default: '' }, label: { type: String, default: '图片' } })
+// props：只读 src/label；src 默认空、label 默认图片，图片来源由调用方保证。
+const props = defineProps({
+  /** 属性 src：网络或临时图片地址，默认空串；变更后允许重新加载。 */
+  src: { type: String, default: '' },
+
+  /** 属性 label：图片可访问名称，默认“图片”，失败占位仍保留语义。 */
+  label: { type: String, default: '图片' },
+})
+// failed：当前 src 的失败标记，初值 false；换 src 后允许重新加载。
 const failed = ref(false)
 watch(
+  /**
+   * 观察图片地址变化，不观察其它展示属性。
+   */
   () => props.src,
+  /**
+   * 新图片地址到来后复位失败，允许实际平台再次加载。
+   */
   () => {
     failed.value = false
   },

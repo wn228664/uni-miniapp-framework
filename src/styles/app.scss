@@ -20,12 +20,19 @@ button::after {
   border: 0;
 }
 .app-page {
+  /* --surface：亮色卡片和弹窗表面，子组件继承页面主题。 */
   --surface: #fff;
+  /* --text：主要正文色。 */
   --text: #172033;
+  /* --muted：说明、占位和次级文案色。 */
   --muted: #606c80;
+  /* --line：边框、分隔和骨架占位色。 */
   --line: #dce2eb;
+  /* --primary：主题主色，用于次级按钮边框和文字。 */
   --primary: #2864dc;
+  /* --canvas：页面画布与图片占位背景。 */
   --canvas: #f5f7fa;
+  /* --danger：公开失败和字段错误文字色。 */
   --danger: #b42336;
   min-height: 100vh;
   background: var(--canvas);
@@ -33,12 +40,19 @@ button::after {
   padding: 20px 16px calc(28px + env(safe-area-inset-bottom));
 }
 .app-page.theme-dark {
+  /* --surface：暗色卡片与弹窗表面。 */
   --surface: #202938;
+  /* --text：暗色主题主要正文色。 */
   --text: #f2f5fa;
+  /* --muted：暗色主题次级说明色。 */
   --muted: #bac5d5;
+  /* --line：暗色主题边框、分隔与骨架色。 */
   --line: #46546a;
+  /* --primary：暗色主题主要强调色，保持与表面的可读对比。 */
   --primary: #92b6ff;
+  /* --canvas：暗色页面画布。 */
   --canvas: #121923;
+  /* --danger：暗色主题公开错误文字色。 */
   --danger: #ff9aa2;
 }
 .content {

@@ -18,7 +18,9 @@
 
 ## 当前验证状态
 
-本地已通过源码检查、ESLint、Prettier、33项测试、微信小程序生产编译与H5辅助预览构建。H5已检查表单、弹窗、图片、分页、主题、键盘焦点及六种布局尺寸。
+2026-11-04 本地复核已通过源码检查、ESLint、Prettier、34 项测试、微信小程序生产编译与 H5 辅助预览构建。本次修复 `createAction` 在非法 `timeoutMs` 下未释放动作锁的问题，回归测试确认抛错后锁恢复，后续合法调用仍能执行。逐项中文注释与配置格式边界见 [注释范围](docs/ANNOTATION_SCOPE.md)。
+
+此前 H5 辅助预览已检查表单、弹窗、图片、分页、主题、键盘焦点及六种布局尺寸。
 
 微信开发者工具和真机运行尚未验收。2026-11-03的依赖审计仍有51项告警（22 high / 19 moderate / 10 low）；签名校验另有公钥缺失记录。详细结果与适用边界见 [验证记录](docs/VALIDATION.md) 和 [依赖说明](docs/DEPENDENCIES.md)，不能由本地构建结果推断生产环境全部通过。
 
@@ -144,6 +146,7 @@ CI 只检查与构建，不包含上传、发布或业务凭证。H5 预览、�
 | [架构决策](docs/ARCHITECTURE.md) | 模块边界、状态归属、平台适配与扩展原则 |
 | [uView配置](docs/UI_FRAMEWORK.md) | Vue 3分支、easycom、主题、字体与升级检查 |
 | [代码与注释标准](docs/CODE_QUALITY.md) | 职责、复用、错误处理、JSDoc和注释准确性 |
+| [逐项注释范围](docs/ANNOTATION_SCOPE.md) | 源码、组件 props、模板、样式与配置格式边界 |
 | [依赖说明](docs/DEPENDENCIES.md) | 固定版本、registry、许可与已知审计风险 |
 | [验证记录](docs/VALIDATION.md) | 实际执行结果、尺寸矩阵及待环境确认项 |
 

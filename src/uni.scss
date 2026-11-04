@@ -1,8 +1,15 @@
 @import 'uview-plus/theme.scss';
+// $uni-color-primary：uni 平台组件的主要操作色；应用 CSS 变量由 app.scss 分别维护。
 $uni-color-primary: #2864dc;
+// $uni-color-success：平台成功状态色。
 $uni-color-success: #21835b;
+// $uni-color-warning：平台警告状态色。
 $uni-color-warning: #9b6811;
+// $uni-color-error：平台错误状态色。
 $uni-color-error: #c23b43;
+// $uni-text-color：平台组件主要文字色。
 $uni-text-color: #172033;
+// $uni-text-color-grey：平台组件次级说明色。
 $uni-text-color-grey: #687386;
+// $uni-border-color：平台组件分隔线与边框色。
 $uni-border-color: #dce2eb;

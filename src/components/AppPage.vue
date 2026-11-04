@@ -2,8 +2,12 @@
 import { usePreferencesStore } from '../stores/preferences.js'
 import { useNetwork } from '../composables/useNetwork.js'
 /** 页面容器维护主题、宽度和断网提示；flush 仅移除顶部/左右留白，底部安全区仍保留。 */
-defineProps({ flush: Boolean })
+defineProps({
+  /** 属性 flush：移除顶部和左右内边距，默认 false；底部安全区仍保留。 */ flush: Boolean,
+})
+// prefs：应用非敏感外观 store；theme 选择容器主题变量。
 const prefs = usePreferencesStore()
+// online：useNetwork 的连接状态 ref，初值乐观 true；仅表示连接提示，不保证接口可达。
 const { online } = useNetwork()
 </script>
 <template>

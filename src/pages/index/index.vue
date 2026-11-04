@@ -1,8 +1,11 @@
 <script setup>
+/** 无需账号/服务器的中性首页。三个模板 action 分别导航到注册能力页，走共享导航锁；没有业务数据或默认登录行为。 */
+
 import AppPage from '../../components/AppPage.vue'
 import AppButton from '../../components/AppButton.vue'
 import { useServices } from '../../app/services.js'
 import { config } from '../../core/config.js'
+// navigation：当前会话共享的注册路由导航服务；模板动作返回跳转 Promise 给按钮锁。
 const { navigation } = useServices()
 </script>
 <template>
@@ -15,12 +18,15 @@ const { navigation } = useServices()
         独立的小程序基础工程。首页无需账号与服务端，可通过展示页验证组件、列表和任务状态。
       </view>
       <view class="actions">
+        <!-- 无参 action：导航到通用组件页；返回跳转 Promise，交给按钮维护等待和失败。 -->
         <AppButton label="通用组件" :action="() => navigation.go('/packages/showcase/components')" />
+        <!-- 无参 action：导航到自定义导航与适配页，复用共享导航锁。 -->
         <AppButton
           label="导航与适配"
           secondary
           :action="() => navigation.go('/packages/showcase/navigation')"
         />
+        <!-- 无参 action：进入本地分页与任务示例，不发送业务请求。 -->
         <AppButton label="列表与任务" secondary :action="() => navigation.go('/packages/showcase/data')" />
       </view>
     </view>
